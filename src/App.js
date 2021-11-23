@@ -1,16 +1,21 @@
 import Nav from './components/Nav.js';
 import HomePage from './components/HomePage.js';
 import Experiences from './components/Experiences.js';
-import Dysplay from './components/Display.js';
+import Display from './components/Display.js';
+import Contact from './components/Contact.js';
+import Footer from './components/Footer.js';
+import SocialMedia from './components/SocialMedia.js';
 
-
-function App() {
+function App () {
 	return (
-		<div className="overflow-x-hidden">
+		<div className="overflow-x-hidden font-body">
 			<Nav />
+			<SocialMedia />
 			<HomePage />
 			<Experiences />
-			<Dysplay />
+			<Display />
+			<Contact />
+			<Footer />
 		</div>
 	);
 }

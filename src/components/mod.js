@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 function PrimaryButton({name, classes}){
     return (
-        <div className={"flex justify-center items-center rounded-full py-2 px-8 mx-4 my-2 w-max font-bold shadow-md cursor-pointer bg-primary text-light transition-all transform hover:-translate-y-1 " + classes}>
+        <div className={"flex justify-center items-center rounded-full py-2 px-8 mx-4 my-2 w-max shadow-md cursor-pointer bg-primary text-light transition-all transform hover:-translate-y-1 filter brightness-110" + classes}>
             {name}
         </div>
     )
@@ -10,15 +10,15 @@ function PrimaryButton({name, classes}){
 
 function SecondaryButton({name, classes}){
     return (
-        <div className={"flex justify-center items-center rounded-full py-2 px-8 mx-4 my-2 w-max  bg-transparent border-2 text-primary border-primary shadow-md font-bold cursor-pointer transition-all transform hover:-translate-y-1 " + classes}>
+        <div className={"flex justify-center items-center rounded-full py-2 px-8 mx-4 my-2 w-max  bg-transparent border text-primary border-primary shadow-md  cursor-pointer transition-all transform hover:-translate-y-1 " + classes}>
             {name}
         </div>
     )
 }
 
-function Link({name, link}) {
+function Link({name, link, color='dark', highlight='primary'}) {
     return(
-        <a href={link} className="px-4 py-2 text-center text-dark w-max transition-all hover:underline hover:text-primary ">{name}</a>
+        <a href={link} className={`px-4 py-2 text-center text-${color} w-max transition-all hover:underline hover:text-${highlight}`}>{name}</a>
     )
 }
 

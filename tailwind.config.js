@@ -10,6 +10,10 @@ module.exports = {
         secondary: "#724130"
       }
     },
+    fontFamily: {
+      display: ['Mr Dafoe', 'sans-serif'],
+      body: ['Poppins', 'Sans-serif']
+    }
   },
   variants: {
     extend: {},

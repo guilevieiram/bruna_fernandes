@@ -8,9 +8,9 @@ import BackgroundHome from '../assets/choc-1-right.jpg'
 function Intro() {
     return (
         <div className="flex flex-col justify-around items-end px-10">
-            <h1 className="text-3xl">Bruna</h1>
-            <h1 className="text-3xl pb-8">Fernandes</h1>
-            <p className="">Chocolatier & Patissier</p>
+            <h1 className="text-5xl font-display">Bruna</h1>
+            <h1 className="text-5xl pb-8 font-display">Fernandes</h1>
+            <p className="text-sm">Chocolatier & Patissier</p>
         </div>
     )
 }
