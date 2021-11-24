@@ -17,7 +17,7 @@ function Intro() {
 
 function Buttons() {
     return (
-        <div className="flex flex-col md:flex-row justify-around items-center ">
+        <div className="flex flex-col md:flex-row justify-around items-center px-5">
             <SecondaryButton name="See more!" />
             <PrimaryButton name="Lets talk!"/>
         </div>

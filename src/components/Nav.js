@@ -1,9 +1,7 @@
 import {useState} from 'react';
 import {
-    PrimaryButton, 
     SecondaryButton,
-    Link,
-    DropDown
+    Link
 } from './mod';
 
 
@@ -18,20 +16,19 @@ function Hamburguer({toggle, close}) {
 }
 
 
-
 function Nav(){
     const [mobileMenu, setMobileMenu] = useState(false);
     const toggleMobileMenu = () => setMobileMenu(!mobileMenu);
 
     return (
-        <div className="flex justify-around flex-col fixed top-0 right-0 w-screen text-sm min-h-20 transform translate-y-0 translate-x-0 bg-opacity-70 md:bg-opacity-70 md:bg-light  z-20">
+        <div className="flex justify-around flex-col fixed top-0 right-0 w-screen text-sm min-h-20 transform translate-y-0 translate-x-0  backdrop-filter md:backdrop-blur-sm md:bg-opacity-70 md:bg-light  z-20">
             <div className="flex justify-around items-center flex-col md:flex-row ">
-                <span className="flex items-center justify-around w-full bg-light bg-opacity-70 md:bg-transparent z-30">
+                <span className="flex items-center justify-around w-full bg-light backdrop-blur-md backdrop-filter bg-opacity-70 md:bg-transparent md:backdrop-blur-none z-30">
                     {/* <img src={logo} alt="" className="my-4 ml-4 mr-12" /> */}
                     <p className="my-4 ml-4 mr-12 text-xl text-dark font-display">B.F.</p>
                     <Hamburguer toggle={toggleMobileMenu} close={mobileMenu}/>
                 </span>
-                <div className={(mobileMenu ? "" : " -translate-y-96") + " flex transform justify-around items-center flex-col transition-all py-4 w-full z-20  rounded-xl  text-dark bg-light bg-opacity-70 md:translate-y-0  md:flex-row md:w-full md:bg-transparent md:text-dark md:py-0"}>
+                <div className={(mobileMenu ? " backdrop-filter backdrop-blur-md " : " -translate-y-96 ") + "  flex transform justify-around items-center flex-col transition-all py-4 w-full z-20 rounded-xl text-dark bg-light bg-opacity-70 md:translate-y-0  md:flex-row md:w-full md:bg-transparent md:text-dark md:py-0 md:backdrop-blur-none"}>
                     <Link name="Experience" link="/"/>
                     <Link name="My work" link="/"/>
                     <SecondaryButton name="Contact"/>

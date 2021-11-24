@@ -4,3 +4,16 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+@layer utilities {
+    .animate-bounce-horizontal {
+        animation: bounce-horizontal 2s ease-in-out infinite;
+    }
+}
+
+@keyframes bounce-horizontal {
+    from {transform: translateX(0)}
+    50% {transform: translateX(-10px)}
+    to {transform: translateX()}
+}

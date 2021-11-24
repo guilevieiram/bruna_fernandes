@@ -14,7 +14,7 @@ const arrowImages = {
 
 const Arrow = (side, func) => {
     return (
-        <div className={`absolute mx-2  ${side}-0`} onClick={func}>
+        <div className={` cursor-pointer absolute px-8 ${side}-0 transform transition-all hover:-translate-y-2`} onClick={func}>
             <img src={arrowImages[side]} className="h-14" />
         </div>
     )
@@ -26,27 +26,27 @@ const LeftArrow = ({func}) => Arrow("left", func)
 function Label({name}) {
     return (
         <div className="max-w-2xl w-full absolute  bottom-0 flex justify-end" >
-            <p className="text-light w-max px-10 py-8">{name}</p>
+            <p className="text-light w-max mx-10 my-8 px-4 py-1 rounded-md shadow-md bg-dark bg-opacity-50 backdrop-blur-sm backdrop-filter ">{name}</p>
         </div>
     )
 }
 
 function CarrousselBalls ({numberBalls, selectedBall, changeImage}){
 
-    const baseClass = "w-3 h-3 rounded-full ";
     const ball = (givenClass, onClick) => <div className="p-2" onClick={onClick}><div className={givenClass}></div></div>
 
     const createBalls = () => {
         let balls = []
         for(let index = 0; index < numberBalls ; index ++){
-            balls = [...balls, ball(baseClass + "bg-light", () => {changeImage(index)})]
+            let color = index === selectedBall ? "light" : "gray-500"
+            let func = index === selectedBall ? ()=>{} : () => {changeImage(index)}
+            balls = [...balls, ball(`w-3 h-3 cursor-pointer transition-all rounded-full bg-${color} transform hover:-translate-y-px`, func)]
         }
-        balls[selectedBall] = ball(baseClass + "bg-gray-500", ()=>{})
         return balls
     }
 
     return(
-        <div className="w-full flex justify-center items-center absolute bottom-0 left-0 ">
+        <div className="w-full flex justify-center z-20 items-center absolute bottom-0 left-0 ">
             {createBalls()}
         </div>
     )

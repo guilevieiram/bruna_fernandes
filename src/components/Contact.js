@@ -28,22 +28,22 @@ function ContactForm () {
             <input className={classBase} type="email" name='email' placeholder="Email" required />
             <input className={classBase} type="text" name='subject' placeholder="Subject" />
             <textarea className={classBase + "h-40 py-4"} type="text" name='message' placeholder="Message" required />
-            <input className='' type="image" alt='' src={messageArrow} value="send" />
+            <input className=' animate-bounce-horizontal' type="image" alt='' src={messageArrow} value="send" />
         </form>
     )
 }
 
 function Contact () {
     return (
-        <div className="min-h-screen bg-light w-screen flex justify-center items-center py-20">
+        <div className="min-h-screen overflow-x-hidden bg-light w-screen flex justify-center items-center py-20">
             <div className=" max-w-5xl w-full flex justify-start items-center">
                 <div className="max-w-md px-5 ml-10 w-full flex flex-col justify-around items-end h-full z-10">
-                    <h1 className="mb-20 mr-5 text-3xl ">Lets talk!</h1>
+                    <h1 className="mb-20 mr-5 text-3xl ">🍫 Lets talk!</h1>
                     <ContactForm />
                 </div>
             </div>
-            <div className="h-screen cover absolute shadow-inner hidden transform right-0 md:block md:translate-x-40 lg:translate-x-0">
-                <img src={background} alt=""  className="h-full w-full left-0 overflow-hidden filter brightness-125  "/>
+            <div className="h-screen absolute shadow-inner hidden transform right-0 md:block">
+                <img src={background} alt=""  className="h-full w-full left-0 filter brightness-125  "/>
             </div>
         </div>
     )
