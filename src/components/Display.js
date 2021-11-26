@@ -4,6 +4,8 @@ import testImage from '../assets/choc-2.jpg';
 import testImage2 from '../assets/desk-1.png';
 import testImage3 from '../assets/desk-3.png';
 
+import displayInfo from '../data/display.json';
+
 import RightArrowImage from '../assets/arrow-r.svg';
 import LeftArrowImage from '../assets/arrow-l.svg';
 const arrowImages = {
@@ -15,7 +17,7 @@ const arrowImages = {
 const Arrow = (side, func) => {
     return (
         <div className={` cursor-pointer absolute px-8 ${side}-0 transform transition-all hover:-translate-y-2`} onClick={func}>
-            <img src={arrowImages[side]} className="h-14" />
+            <img src={arrowImages[side]} className="h-14 shadow-xl" />
         </div>
     )
 }
@@ -52,12 +54,12 @@ function CarrousselBalls ({numberBalls, selectedBall, changeImage}){
     )
 }
 
-function Carroussel ({imagesList}) {
-    const numImages = imagesList.length;
-    const [image, setImage] = useState(imagesList[0])
+function Carroussel ({displayList}) {
+    const numImages = displayList.length;
+    const [image, setImage] = useState(displayList[0].image)
     const [imageIndex, setImageIndex] = useState(0)
     useEffect(() => {
-        setImage(imagesList[imageIndex])
+        setImage(displayList[imageIndex].image)
     }, [imageIndex])
     const changeToImage = (imageNumber) => setImageIndex(imageNumber)
 
@@ -69,7 +71,7 @@ function Carroussel ({imagesList}) {
                 <CarrousselBalls numberBalls={numImages} selectedBall={imageIndex} changeImage={changeToImage}/>
                 <RightArrow func={() => setImageIndex((imageIndex + 1 ) % numImages)}/>
                 <LeftArrow func={() => setImageIndex((imageIndex - 1) % numImages)}/>
-                <Label name="Test Name"/>
+                <Label name={displayList[imageIndex].name}/>
             </div>
         </div>
 
@@ -80,7 +82,7 @@ function Dysplay () {
     return (
         <div className=" bg-dark flex flex-col justify-start items-center w-screen text-light shadow-inner ">
             <Carroussel 
-                imagesList={[testImage3, testImage, testImage3, testImage]}
+                displayList={displayInfo}
             />
         </div>
     )

@@ -1,0 +1,14 @@
+[
+    {
+        "image": "https://images.pexels.com/photos/1693027/pexels-photo-1693027.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name": "Hazelnut bars"
+    },
+    {
+        "image": "https://images.pexels.com/photos/7296685/pexels-photo-7296685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name": "Vanilla & Chocolate Macaroons"
+    },
+    {
+        "image": "https://images.pexels.com/photos/4946407/pexels-photo-4946407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name": "Profiteroles"
+    }
+]

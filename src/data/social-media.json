@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Bruna Patrus",
+        "link": "https://www.facebook.com/bruna.patrus",
+        "image": "https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/social-media/facebook.png?raw=true"
+    },
+    {
+        "name": "Bruna Patrus A Fernandes",
+        "link": "https://www.instagram.com/brunapaatrus/",
+        "image": "https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/social-media/instagram.png?raw=true"
+    },
+    {
+        "name": "bruna.patrus@gmail.com",
+        "link": "mailto:bruna.patrus@gmail.com",
+        "image": "https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/social-media/gmail.png?raw=true"
+    },
+    {
+        "name": "+55 31 98855-2215",
+        "link": "https://wa.me/5531988552215",
+        "image": "https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/social-media/whatsapp.png?raw=true"
+    }
+]

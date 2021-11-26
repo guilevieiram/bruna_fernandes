@@ -1,0 +1,23 @@
+[
+    {
+        "title": "William Curley - Chocolatier & Patissier",
+        "description": "Working and as chocolatier in London in the manifecturer side of production for the renowned chocolatier William Curley ",
+        "image": "https://www.williamcurley.co.uk/wp-content/uploads/WC-1.0-300x229.png",
+        "link": "https://www.williamcurley.co.uk/",
+        "date": "(2021 - present)"
+    },
+    {
+        "title": "Le Cordon Bleu London",
+        "description": "Graduated in Patisserie in Le Cordon Bleu, the most renowned french high cousine school in the world.",
+        "image": "https://www.kindpng.com/picc/m/140-1402169_thumb-image-le-cordon-bleu-hd-png-download.png",
+        "link": "https://www.cordonbleu.edu",
+        "date": "(2021)"
+    },
+    {
+        "title": "Renata Penido - Chocolatier course",
+        "description": "Chocolate course from one of the most renowned chocolatiers in Brazil.",
+        "image": "https://yt3.ggpht.com/ytc/AKedOLRwQrz-kxnq4M7TCPN9fXeZqcjfDXZ8zr9wicg=s900-c-k-c0x00ffffff-no-rj",
+        "link": "https://renatapenido.com/",
+        "date": "(2020)"
+    }
+]
