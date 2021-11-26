@@ -1,34 +1,33 @@
 import messageArrow from '../assets/arrow-message.svg';
 import background from '../assets/choc-3.jpg';
+import React from 'react';
+import emailjs from 'emailjs-com';
+
 
 function ContactForm () {
 
-    // const sendEmail = (e) => {
-    //     e.preventDefault();
-    //     // change the credentials
-    //     emailjs.sendForm('service_4lzkp5c', 'template_zxgw2ik', e.target, 'user_H5w5JpSw1OBqNALZnAMm5')
-    //     .then((result) => {
-    //         console.log(result.text);
-    //         e.target.reset();
-    //         window.alert("Your message has been sent!\n\nI'll contact you as soon as possible!")
-    //     }, (error) => {
-    //         console.log(error.text);
-    //         window.alert("Looks like our servers are down...\n\nTry contacting me on my social media!")
-    //     });
-    // }
-
     const sendEmail = (e) => {
-        console.log("sent")
+        e.preventDefault();
+        // change the credentials
+        emailjs.sendForm('service_4lzkp5c', 'template_zxgw2ik', e.target, 'user_H5w5JpSw1OBqNALZnAMm5')
+        .then((result) => {
+            console.log(result.text);
+            e.target.reset();
+            window.alert("Your message has been sent!\n\nI'll contact you as soon as possible!")
+        }, (error) => {
+            console.log(error.text);
+            window.alert("Looks like our servers are down...\n\nTry contacting me on my social media!")
+        });
     }
 
-    const classBase = "w-full my-4 bg-dark text-light px-4 py-2 text-sm "
+    const classBase = "w-full my-4 bg-dark text-light px-4 py-2 text-sm rounded-md shadow-md "
 
     return (
         <form className="flex flex-col justify-around items-end w-full" action="" onSubmit={sendEmail}>
             <input className={classBase} type="email" name='email' placeholder="Email" required />
             <input className={classBase} type="text" name='subject' placeholder="Subject" />
             <textarea className={classBase + "h-40 py-4"} type="text" name='message' placeholder="Message" required />
-            <input className=' animate-bounce-horizontal' type="image" alt='' src={messageArrow} value="send" />
+            <input className=' animate-bounce-horizontal filter hover:brightness-150 ' type="image" alt='' src={messageArrow} value="send" />
         </form>
     )
 }

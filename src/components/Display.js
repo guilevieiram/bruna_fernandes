@@ -65,7 +65,7 @@ function Carroussel ({imagesList}) {
     return (
         <div className="relative w-screen max-w-4xl flex justify-around">
             <div className="h-screen w-full max-w-2xl overflow-y-hidden flex justify-center items-center ">
-                <img src={image} alt="" className="object-cover h-screen w-screen" />
+                <img src={image} alt="" className="object-cover h-screen w-screen " />
                 <CarrousselBalls numberBalls={numImages} selectedBall={imageIndex} changeImage={changeToImage}/>
                 <RightArrow func={() => setImageIndex((imageIndex + 1 ) % numImages)}/>
                 <LeftArrow func={() => setImageIndex((imageIndex - 1) % numImages)}/>
@@ -78,7 +78,7 @@ function Carroussel ({imagesList}) {
 
 function Dysplay () {
     return (
-        <div className=" bg-dark flex flex-col justify-start items-center w-screen text-light ">
+        <div className=" bg-dark flex flex-col justify-start items-center w-screen text-light shadow-inner ">
             <Carroussel 
                 imagesList={[testImage3, testImage, testImage3, testImage]}
             />

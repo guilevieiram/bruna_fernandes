@@ -20,7 +20,7 @@ function Experience ({imagePosition, image, title, description, link}) {
 
 function Experiences (){
     return (
-        <div className="min-h-screen w-screen flex justify-start items-center flex-col bg-light shadow-lg z-30 py-20">
+        <div className="min-h-screen w-screen flex justify-start items-center flex-col bg-light drop-shadow-2xl box-shadow-lg z-30 py-20">
             <h1 className="font-bold text-2xl">Experiences</h1>
             <div className="h-px w-1/2 mt-10 bg-dark"></div>
             <div className="max-w-xl w-full">
