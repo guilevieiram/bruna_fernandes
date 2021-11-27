@@ -29,23 +29,20 @@ function Label({name}) {
     )
 }
 
+function Ball({selected, index, onClick}) {
+    let func = index === selected ? ()=>{} : () => {onClick(index)};
+
+    return (
+        <div key={index} className="p-2" onClick={func}>
+            <div  className={`w-3 h-3 cursor-pointer transition-all border rounded-full ${index === selected ? 'bg' : 'border'}-light bg-opacity-100 transform hover:-translate-y-px select-none z-30`}></div>
+        </div>
+    )
+}
+
 function CarrousselBalls ({numberBalls, selectedBall, changeImage}){
-
-    const ball = (givenClass, onClick, index) => <div key={index} className="p-2" onClick={onClick}><div className={givenClass}></div></div>
-
-    const createBalls = () => {
-        let balls = []
-        for(let index = 0; index < numberBalls ; index ++){
-            let color = index === selectedBall ? "light" : "lightGray";
-            let func = index === selectedBall ? ()=>{} : () => {changeImage(index)};
-            balls = [...balls, ball(`w-3 h-3 cursor-pointer transition-all rounded-full bg-${color} transform hover:-translate-y-px select-none z-30`, func, index)]
-        }
-        return balls
-    }
-
     return(
         <div className="w-full flex justify-center z-20 items-center absolute bottom-0 left-0 backdrop-filter backdrop-blur-sm bg-opacity-50 bg-dark">
-            {createBalls()}
+            {Array.from(Array(numberBalls), (_, index) => <Ball selected={selectedBall} onClick={changeImage} index={index}/> )}
         </div>
     )
 }
