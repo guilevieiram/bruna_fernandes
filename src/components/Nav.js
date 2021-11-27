@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect, useRef} from 'react';
 import {
     SecondaryButton,
     Link,
@@ -17,13 +17,45 @@ function Hamburguer({toggle, close}) {
     )
 }
 
+function useOnClickOutside(ref, handler) {
+    useEffect(
+      () => {
+        const listener = (event) => {
+          // Do nothing if clicking ref's element or descendent elements
+          if (!ref.current || ref.current.contains(event.target)) {
+            return;
+          }
+  
+          handler(event);
+        };
+  
+        document.addEventListener("mousedown", listener);
+        document.addEventListener("touchstart", listener);
+  
+        return () => {
+          document.removeEventListener("mousedown", listener);
+          document.removeEventListener("touchstart", listener);
+        };
+      },
+      // Add ref and handler to effect dependencies
+      // It's worth noting that because passed in handler is a new ...
+      // ... function on every render that will cause this effect ...
+      // ... callback/cleanup to run every render. It's not a big deal ...
+      // ... but to optimize you can wrap handler in useCallback before ...
+      // ... passing it into this hook.
+      [ref, handler]
+    );
+  }
 
 function Nav(){
     const [mobileMenu, setMobileMenu] = useState(false);
     const toggleMobileMenu = () => setMobileMenu(!mobileMenu);
+    const ref = useRef();
+
+    useOnClickOutside(ref, () => setMobileMenu(false))
 
     return (
-        <div className="flex justify-around flex-col fixed top-0 right-0 w-screen text-sm min-h-20 transform translate-y-0 translate-x-0  backdrop-filter md:backdrop-blur-sm md:bg-opacity-70 md:bg-light  z-50">
+        <div ref={ref} className="flex justify-around flex-col fixed top-0 right-0 w-screen text-sm min-h-20 transform translate-y-0 translate-x-0  backdrop-filter md:backdrop-blur-sm md:bg-opacity-70 md:bg-light  z-50">
             <div className="flex justify-around items-center flex-col md:flex-row ">
                 <span className="flex items-center justify-around w-full bg-light backdrop-blur-md backdrop-filter bg-opacity-70 md:bg-transparent md:backdrop-blur-none z-60">
                     <Scrollable sectionId="HomePage" element={

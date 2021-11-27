@@ -2,17 +2,17 @@ import {useState} from 'react'
 import {Link as ScrollLink} from 'react-scroll';
 
 
-function PrimaryButton({name, classes}){
+function PrimaryButton({name, classes, action=()=>{}}){
     return (
-        <div className={"flex justify-center items-center rounded-full py-2 px-8 mx-4 my-2 w-max shadow-md cursor-pointer bg-primary text-light transition-all transform hover:-translate-y-1 filter brightness-110" + classes}>
+        <div onClick={action} className={"flex justify-center items-center rounded-full py-2 px-8 mx-4 my-2 w-max shadow-md cursor-pointer bg-primary text-light transition-all transform hover:-translate-y-1 filter brightness-110" + classes}>
             {name}
         </div>
     )
 }
 
-function SecondaryButton({name, classes}){
+function SecondaryButton({name, classes, action=()=>{}}){
     return (
-        <div className={"flex justify-center items-center rounded-full py-2 px-8 mx-4 my-2 w-max  bg-transparent border text-primary border-primary shadow-md  cursor-pointer transition-all transform hover:-translate-y-1 " + classes}>
+        <div onClick={action} className={"flex justify-center items-center rounded-full py-2 px-8 mx-4 my-2 w-max  bg-transparent border text-primary border-primary shadow-md  cursor-pointer transition-all transform hover:-translate-y-1 " + classes}>
             {name}
         </div>
     )
