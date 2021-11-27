@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bruna_fernandes/static/css/main.5ace31bc.chunk.css",
-    "main.js": "/bruna_fernandes/static/js/main.22322d57.chunk.js",
-    "main.js.map": "/bruna_fernandes/static/js/main.22322d57.chunk.js.map",
+    "main.js": "/bruna_fernandes/static/js/main.5183d851.chunk.js",
+    "main.js.map": "/bruna_fernandes/static/js/main.5183d851.chunk.js.map",
     "runtime-main.js": "/bruna_fernandes/static/js/runtime-main.a1ad6201.js",
     "runtime-main.js.map": "/bruna_fernandes/static/js/runtime-main.a1ad6201.js.map",
     "static/js/2.953b4b32.chunk.js": "/bruna_fernandes/static/js/2.953b4b32.chunk.js",
@@ -14,12 +14,12 @@
     "static/media/arrow-message.fa10c95d.svg": "/bruna_fernandes/static/media/arrow-message.fa10c95d.svg",
     "static/media/arrow-r.b2315a20.svg": "/bruna_fernandes/static/media/arrow-r.b2315a20.svg",
     "static/media/choc-3.550d9711.jpg": "/bruna_fernandes/static/media/choc-3.550d9711.jpg",
-    "static/media/logo.439d5095.svg": "/bruna_fernandes/static/media/logo.439d5095.svg"
+    "static/media/logo.5d606367.svg": "/bruna_fernandes/static/media/logo.5d606367.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a1ad6201.js",
     "static/js/2.953b4b32.chunk.js",
     "static/css/main.5ace31bc.chunk.css",
-    "static/js/main.22322d57.chunk.js"
+    "static/js/main.5183d851.chunk.js"
   ]
 }
