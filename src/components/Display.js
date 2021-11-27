@@ -1,9 +1,5 @@
 import {useState, useEffect} from 'react';
 
-import testImage from '../assets/choc-2.jpg';
-import testImage2 from '../assets/desk-1.png';
-import testImage3 from '../assets/desk-3.png';
-
 import displayInfo from '../data/display.json';
 
 import RightArrowImage from '../assets/arrow-r.svg';
@@ -56,18 +52,17 @@ function CarrousselBalls ({numberBalls, selectedBall, changeImage}){
 
 function Carroussel ({displayList}) {
     const numImages = displayList.length;
-    const [image, setImage] = useState(displayList[0].image)
     const [imageIndex, setImageIndex] = useState(0)
-    useEffect(() => {
-        setImage(displayList[imageIndex].image)
-    }, [imageIndex])
     const changeToImage = (imageNumber) => setImageIndex(imageNumber)
-
-
+    const imageComponents = displayList.map((item) => {
+        new Image().src = item.image; 
+        return <img src={item.image} className="object-cover h-screen w-screen "></img>
+    })
+    
     return (
         <div id="Display" className="relative w-screen max-w-4xl flex justify-around">
             <div className="h-screen w-full max-w-2xl overflow-y-hidden flex justify-center items-center ">
-                <img src={image} alt="" className="object-cover h-screen w-screen " />
+                {imageComponents[imageIndex]}
                 <CarrousselBalls numberBalls={numImages} selectedBall={imageIndex} changeImage={changeToImage}/>
                 <RightArrow func={() => setImageIndex(Math.abs(imageIndex + 1 ) % numImages)}/>
                 <LeftArrow func={() => setImageIndex(Math.abs(imageIndex - 1) % numImages)}/>
