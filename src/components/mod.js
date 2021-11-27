@@ -18,14 +18,18 @@ function SecondaryButton({name, classes}){
     )
 }
 
-function Link({name, link, color='dark', highlight='primary'}) {
+function Link({name, link, action=()=>{}, color='dark', highlight='primary'}) {
     return(
-        <a href={link} className={`px-4 py-2 text-center text-${color} w-max transition-all hover:underline hover:text-${highlight}`}>{name}</a>
+        <a href={link} onClick={action} className={`px-4 py-2 text-center text-${color} w-max transition-all hover:underline hover:text-${highlight}`}>{name}</a>
     )
 }
 
 function Scrollable({element, sectionId}){
-    return <ScrollLink to={sectionId} spy={true} smooth={true} >{element}</ScrollLink>
+    return (
+        <div className="py-2">
+            <ScrollLink to={sectionId} spy={true} smooth={true} >{element}</ScrollLink>
+        </div>
+    )
 }
 
 

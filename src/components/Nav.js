@@ -4,6 +4,7 @@ import {
     Link,
     Scrollable
 } from './mod';
+import logo from '../assets/logo.svg';
 
 
 function Hamburguer({toggle, close}) {
@@ -25,21 +26,21 @@ function Nav(){
         <div className="flex justify-around flex-col fixed top-0 right-0 w-screen text-sm min-h-20 transform translate-y-0 translate-x-0  backdrop-filter md:backdrop-blur-sm md:bg-opacity-70 md:bg-light  z-50">
             <div className="flex justify-around items-center flex-col md:flex-row ">
                 <span className="flex items-center justify-around w-full bg-light backdrop-blur-md backdrop-filter bg-opacity-70 md:bg-transparent md:backdrop-blur-none z-60">
-                    {/* <img src={logo} alt="" className="my-4 ml-4 mr-12" /> */}
                     <Scrollable sectionId="HomePage" element={
-                        <p className="my-4 ml-4 mr-12 text-xl text-dark font-display">B.F.</p>
+                        // <p className="my-4 ml-4 mr-12 text-xl text-dark font-display">B.F.</p>
+                        <img src={logo} alt="" className="my-1 ml-4 mr-12 h-10 cursor-pointer" />
                     }/>
                     <Hamburguer toggle={toggleMobileMenu} close={mobileMenu}/>
                 </span>
                 <div className={(mobileMenu ? " backdrop-filter backdrop-blur-md  mt-2" : " -translate-y-96 ") + "  flex transform justify-around items-center flex-col transition-all py-4 w-full z-10 rounded-xl text-dark bg-light bg-opacity-70 md:translate-y-0  md:flex-row md:w-full md:bg-transparent md:text-dark md:py-0 md:backdrop-blur-none"}>
                     <Scrollable sectionId="Experience" element={
-                        <Link  name="Experience" link="/"/>
+                        <Link  name="Experience" link="/" action={toggleMobileMenu}/>
                     }/>
                     <Scrollable  sectionId="Display" element={
-                        <Link name="My work" link="/"/>
+                        <Link name="My work" link="/" action={toggleMobileMenu}/>
                     }/>
                     <Scrollable sectionId="Contact" element={
-                        <SecondaryButton name="Contact"/>
+                        <SecondaryButton name="Contact" action={toggleMobileMenu}/>
                     }/>
                 </div>
             </div>
