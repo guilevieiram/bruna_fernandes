@@ -20,7 +20,7 @@ function SecondaryButton({name, classes, action=()=>{}}){
 
 function Link({name, link, action=()=>{}, color='dark', highlight='primary'}) {
     return(
-        <a href={link} onClick={action} className={`px-4 py-2 text-center text-${color} w-max transition-all hover:underline hover:text-${highlight}`}>{name}</a>
+        <p href={link} onClick={action} className={`px-4 py-2 text-center text-${color} w-max transition-all hover:underline hover:text-${highlight}`}>{name}</p>
     )
 }
 

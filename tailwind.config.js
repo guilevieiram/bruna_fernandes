@@ -7,7 +7,8 @@ module.exports = {
         light: "#f4f4f4",
         dark: "#454545",
         primary: "#366473",
-        secondary: "#724130"
+        secondary: "#724130",
+        lightGray: "#7a7a7a"
       }
     },
     fontFamily: {

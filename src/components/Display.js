@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 import displayInfo from '../data/display.json';
 
@@ -13,7 +13,7 @@ const arrowImages = {
 const Arrow = (side, func) => {
     return (
         <div className={` cursor-pointer absolute px-8 ${side}-0 transform transition-all hover:-translate-y-2 select-none`} onClick={func}>
-            <img src={arrowImages[side]} className="h-14 shadow-xl" />
+            <img src={arrowImages[side]} alt={`${side} arrow`} className="h-14 shadow-xl" />
         </div>
     )
 }
@@ -31,14 +31,14 @@ function Label({name}) {
 
 function CarrousselBalls ({numberBalls, selectedBall, changeImage}){
 
-    const ball = (givenClass, onClick) => <div className="p-2" onClick={onClick}><div className={givenClass}></div></div>
+    const ball = (givenClass, onClick, index) => <div key={index} className="p-2" onClick={onClick}><div className={givenClass}></div></div>
 
     const createBalls = () => {
         let balls = []
         for(let index = 0; index < numberBalls ; index ++){
-            let color = index === selectedBall ? "light" : "gray-400"
-            let func = index === selectedBall ? ()=>{} : () => {changeImage(index)}
-            balls = [...balls, ball(`w-3 h-3 cursor-pointer transition-all rounded-full bg-${color} transform hover:-translate-y-px select-none z-30`, func)]
+            let color = index === selectedBall ? "light" : "lightGray";
+            let func = index === selectedBall ? ()=>{} : () => {changeImage(index)};
+            balls = [...balls, ball(`w-3 h-3 cursor-pointer transition-all rounded-full bg-${color} transform hover:-translate-y-px select-none z-30`, func, index)]
         }
         return balls
     }
@@ -54,9 +54,9 @@ function Carroussel ({displayList}) {
     const numImages = displayList.length;
     const [imageIndex, setImageIndex] = useState(0)
     const changeToImage = (imageNumber) => setImageIndex(imageNumber)
-    const imageComponents = displayList.map((item) => {
+    const imageComponents = displayList.map((item, index) => {
         new Image().src = item.image; 
-        return <img src={item.image} className="object-cover h-screen w-screen "></img>
+        return <img src={item.image} alt={displayList[index].name} className="object-cover h-screen w-screen "></img>
     })
     
     return (

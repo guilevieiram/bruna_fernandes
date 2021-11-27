@@ -27,7 +27,7 @@ function BackgroundImage () {
     const BackgroundHome = 'https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/choc-1-right.jpg?raw=true'
     return (
         <div className="fixed left-0 top-0 transform -translate-x-1/2 h-screen  sm:translate-x-0 shadow-inner-lg overflow-hidden" style={{zIndex: -10}}>
-            <img src={BackgroundHome} alt="background-image"  className=" w-full h-full"/>
+            <img src={BackgroundHome} alt="background" className=" w-full h-full"/>
         </div>
     )
 }
