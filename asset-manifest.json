@@ -1,31 +1,25 @@
 {
   "files": {
-    "main.css": "/bruna_fernandes/static/css/main.0044b68e.chunk.css",
-    "main.js": "/bruna_fernandes/static/js/main.0baf4ccf.chunk.js",
-    "main.js.map": "/bruna_fernandes/static/js/main.0baf4ccf.chunk.js.map",
+    "main.css": "/bruna_fernandes/static/css/main.5ace31bc.chunk.css",
+    "main.js": "/bruna_fernandes/static/js/main.22322d57.chunk.js",
+    "main.js.map": "/bruna_fernandes/static/js/main.22322d57.chunk.js.map",
     "runtime-main.js": "/bruna_fernandes/static/js/runtime-main.a1ad6201.js",
     "runtime-main.js.map": "/bruna_fernandes/static/js/runtime-main.a1ad6201.js.map",
-    "static/js/2.5e561b65.chunk.js": "/bruna_fernandes/static/js/2.5e561b65.chunk.js",
-    "static/js/2.5e561b65.chunk.js.map": "/bruna_fernandes/static/js/2.5e561b65.chunk.js.map",
+    "static/js/2.953b4b32.chunk.js": "/bruna_fernandes/static/js/2.953b4b32.chunk.js",
+    "static/js/2.953b4b32.chunk.js.map": "/bruna_fernandes/static/js/2.953b4b32.chunk.js.map",
     "index.html": "/bruna_fernandes/index.html",
-    "static/css/main.0044b68e.chunk.css.map": "/bruna_fernandes/static/css/main.0044b68e.chunk.css.map",
-    "static/js/2.5e561b65.chunk.js.LICENSE.txt": "/bruna_fernandes/static/js/2.5e561b65.chunk.js.LICENSE.txt",
+    "static/css/main.5ace31bc.chunk.css.map": "/bruna_fernandes/static/css/main.5ace31bc.chunk.css.map",
+    "static/js/2.953b4b32.chunk.js.LICENSE.txt": "/bruna_fernandes/static/js/2.953b4b32.chunk.js.LICENSE.txt",
     "static/media/arrow-l.52e94a24.svg": "/bruna_fernandes/static/media/arrow-l.52e94a24.svg",
     "static/media/arrow-message.fa10c95d.svg": "/bruna_fernandes/static/media/arrow-message.fa10c95d.svg",
     "static/media/arrow-r.b2315a20.svg": "/bruna_fernandes/static/media/arrow-r.b2315a20.svg",
-    "static/media/choc-1-right.6dacd76f.jpg": "/bruna_fernandes/static/media/choc-1-right.6dacd76f.jpg",
-    "static/media/choc-2.86281a6f.jpg": "/bruna_fernandes/static/media/choc-2.86281a6f.jpg",
     "static/media/choc-3.550d9711.jpg": "/bruna_fernandes/static/media/choc-3.550d9711.jpg",
-    "static/media/desk-1.7766ba43.png": "/bruna_fernandes/static/media/desk-1.7766ba43.png",
-    "static/media/desk-3.a44d41ef.png": "/bruna_fernandes/static/media/desk-3.a44d41ef.png",
-    "static/media/gmail.a2f2146f.png": "/bruna_fernandes/static/media/gmail.a2f2146f.png",
-    "static/media/instagram.6030a881.png": "/bruna_fernandes/static/media/instagram.6030a881.png",
-    "static/media/whatsapp.1dd8ca27.png": "/bruna_fernandes/static/media/whatsapp.1dd8ca27.png"
+    "static/media/logo.439d5095.svg": "/bruna_fernandes/static/media/logo.439d5095.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a1ad6201.js",
-    "static/js/2.5e561b65.chunk.js",
-    "static/css/main.0044b68e.chunk.css",
-    "static/js/main.0baf4ccf.chunk.js"
+    "static/js/2.953b4b32.chunk.js",
+    "static/css/main.5ace31bc.chunk.css",
+    "static/js/main.22322d57.chunk.js"
   ]
 }
