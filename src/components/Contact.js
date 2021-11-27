@@ -34,7 +34,7 @@ function ContactForm () {
 
 function Contact () {
     return (
-        <div className="min-h-screen overflow-x-hidden bg-light w-screen flex justify-center items-center py-20">
+        <div id="Contact" className="min-h-screen overflow-x-hidden bg-light w-screen flex justify-center items-center py-20">
             <div className=" max-w-5xl w-full flex justify-start items-center">
                 <div className="max-w-md px-5 ml-10 w-full flex flex-col justify-around items-end h-full z-10">
                     <h1 className="mb-20 mr-5 text-3xl ">🍫 Lets talk!</h1>

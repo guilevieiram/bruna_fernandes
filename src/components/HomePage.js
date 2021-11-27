@@ -24,7 +24,7 @@ function Buttons() {
 }
 
 function BackgroundImage () {
-    const BackgroundHome = 'https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/choc-1.jpg?raw=true'
+    const BackgroundHome = 'https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/choc-1-right.jpg?raw=true'
     return (
         <div className="fixed left-0 top-0 transform -translate-x-2/3 h-screen scale-110 w-max sm:translate-x-0 shadow-inner-lg overflow-hidden" style={{zIndex: -10}}>
             <img src={BackgroundHome} alt="background-image"  className=" w-full h-full"/>
@@ -34,7 +34,7 @@ function BackgroundImage () {
  
 function HomePage () {
     return (
-        <div className="h-screen py-20 w-screen flex justify-around items-center">
+        <div id="HomePage" className="h-screen py-20 w-screen flex justify-around items-center">
             <BackgroundImage />
             <div className=" max-w-screen-md w-full h-full flex flex-col justify-around items-end z-10">
                 <Intro />

@@ -2,21 +2,21 @@
     {
         "title": "William Curley - Chocolatier & Patissier",
         "description": "Working and as chocolatier in London in the manifecturer side of production for the renowned chocolatier William Curley ",
-        "image": "https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/experiences/cordon-bleu.jpg?raw=true",
+        "image": "https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/experiences/william.png?raw=true",
         "link": "https://www.williamcurley.co.uk/",
         "date": "(2021 - present)"
     },
     {
         "title": "Le Cordon Bleu London",
         "description": "Graduated in Patisserie in Le Cordon Bleu, the most renowned french high cousine school in the world.",
-        "image": "https://www.kindpng.com/picc/m/140-1402169_thumb-image-le-cordon-bleu-hd-png-download.png",
+        "image": "https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/experiences/cordon-bleu.jpg?raw=true",
         "link": "https://www.cordonbleu.edu",
         "date": "(2021)"
     },
     {
         "title": "Renata Penido - Chocolatier course",
         "description": "Chocolate course from one of the most renowned chocolatiers in Brazil.",
-        "image": "https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/experiences/william.png?raw=true",
+        "image": "https://github.com/guilevieiram/bruna_fernandes/blob/main/src/assets/experiences/renata.jpg?raw=true",
         "link": "https://renatapenido.com/",
         "date": "(2020)"
     }

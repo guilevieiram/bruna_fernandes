@@ -40,7 +40,7 @@ function CarrousselBalls ({numberBalls, selectedBall, changeImage}){
     const createBalls = () => {
         let balls = []
         for(let index = 0; index < numberBalls ; index ++){
-            let color = index === selectedBall ? "light" : "gray-500"
+            let color = index === selectedBall ? "light" : "gray-400"
             let func = index === selectedBall ? ()=>{} : () => {changeImage(index)}
             balls = [...balls, ball(`w-3 h-3 cursor-pointer transition-all rounded-full bg-${color} transform hover:-translate-y-px`, func)]
         }
@@ -48,7 +48,7 @@ function CarrousselBalls ({numberBalls, selectedBall, changeImage}){
     }
 
     return(
-        <div className="w-full flex justify-center z-20 items-center absolute bottom-0 left-0 ">
+        <div className="w-full flex justify-center z-20 items-center absolute bottom-0 left-0 backdrop-filter backdrop-blur-sm bg-opacity-50 bg-dark">
             {createBalls()}
         </div>
     )
@@ -65,12 +65,12 @@ function Carroussel ({displayList}) {
 
 
     return (
-        <div className="relative w-screen max-w-4xl flex justify-around">
+        <div id="Display" className="relative w-screen max-w-4xl flex justify-around">
             <div className="h-screen w-full max-w-2xl overflow-y-hidden flex justify-center items-center ">
                 <img src={image} alt="" className="object-cover h-screen w-screen " />
                 <CarrousselBalls numberBalls={numImages} selectedBall={imageIndex} changeImage={changeToImage}/>
-                <RightArrow func={() => setImageIndex((imageIndex + 1 ) % numImages)}/>
-                <LeftArrow func={() => setImageIndex((imageIndex - 1) % numImages)}/>
+                <RightArrow func={() => setImageIndex(Math.abs(imageIndex + 1 ) % numImages)}/>
+                <LeftArrow func={() => setImageIndex(Math.abs(imageIndex - 1) % numImages)}/>
                 <Label name={displayList[imageIndex].name}/>
             </div>
         </div>

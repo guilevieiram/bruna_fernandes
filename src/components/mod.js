@@ -1,4 +1,6 @@
 import {useState} from 'react'
+import {Link as ScrollLink} from 'react-scroll';
+
 
 function PrimaryButton({name, classes}){
     return (
@@ -22,6 +24,11 @@ function Link({name, link, color='dark', highlight='primary'}) {
     )
 }
 
+function Scrollable({element, sectionId}){
+    return <ScrollLink to={sectionId} spy={true} smooth={true} >{element}</ScrollLink>
+}
+
+
 function DropDown({name, links}) {
     const [open, setOpen] = useState(false)
     const toggleTag = () => setOpen(!open)
@@ -43,5 +50,6 @@ export {
     PrimaryButton,
     SecondaryButton,
     Link,
-    DropDown
+    DropDown,
+    Scrollable
 }  ;

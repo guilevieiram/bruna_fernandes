@@ -1,7 +1,8 @@
 import {useState} from 'react';
 import {
     SecondaryButton,
-    Link
+    Link,
+    Scrollable
 } from './mod';
 
 
@@ -25,13 +26,21 @@ function Nav(){
             <div className="flex justify-around items-center flex-col md:flex-row ">
                 <span className="flex items-center justify-around w-full bg-light backdrop-blur-md backdrop-filter bg-opacity-70 md:bg-transparent md:backdrop-blur-none z-60">
                     {/* <img src={logo} alt="" className="my-4 ml-4 mr-12" /> */}
-                    <p className="my-4 ml-4 mr-12 text-xl text-dark font-display">B.F.</p>
+                    <Scrollable sectionId="HomePage" element={
+                        <p className="my-4 ml-4 mr-12 text-xl text-dark font-display">B.F.</p>
+                    }/>
                     <Hamburguer toggle={toggleMobileMenu} close={mobileMenu}/>
                 </span>
-                <div className={(mobileMenu ? " backdrop-filter backdrop-blur-md " : " -translate-y-96 ") + "  flex transform justify-around items-center flex-col transition-all py-4 w-full z-10 rounded-xl text-dark bg-light bg-opacity-70 md:translate-y-0  md:flex-row md:w-full md:bg-transparent md:text-dark md:py-0 md:backdrop-blur-none"}>
-                    <Link name="Experience" link="/"/>
-                    <Link name="My work" link="/"/>
-                    <SecondaryButton name="Contact"/>
+                <div className={(mobileMenu ? " backdrop-filter backdrop-blur-md  mt-2" : " -translate-y-96 ") + "  flex transform justify-around items-center flex-col transition-all py-4 w-full z-10 rounded-xl text-dark bg-light bg-opacity-70 md:translate-y-0  md:flex-row md:w-full md:bg-transparent md:text-dark md:py-0 md:backdrop-blur-none"}>
+                    <Scrollable sectionId="Experience" element={
+                        <Link  name="Experience" link="/"/>
+                    }/>
+                    <Scrollable  sectionId="Display" element={
+                        <Link name="My work" link="/"/>
+                    }/>
+                    <Scrollable sectionId="Contact" element={
+                        <SecondaryButton name="Contact"/>
+                    }/>
                 </div>
             </div>
         </div>
