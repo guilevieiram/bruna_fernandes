@@ -38,7 +38,7 @@ function CarrousselBalls ({numberBalls, selectedBall, changeImage}){
         for(let index = 0; index < numberBalls ; index ++){
             let color = index === selectedBall ? "light" : "gray-400"
             let func = index === selectedBall ? ()=>{} : () => {changeImage(index)}
-            balls = [...balls, ball(`w-3 h-3 cursor-pointer transition-all rounded-full bg-${color} transform hover:-translate-y-px select-none`, func)]
+            balls = [...balls, ball(`w-3 h-3 cursor-pointer transition-all rounded-full bg-${color} transform hover:-translate-y-px select-none z-30`, func)]
         }
         return balls
     }
