@@ -50,6 +50,7 @@ function useOnClickOutside(ref, handler) {
 function Nav(){
     const [mobileMenu, setMobileMenu] = useState(false);
     const toggleMobileMenu = () => setMobileMenu(!mobileMenu);
+    const closeMobileMenu = () => setMobileMenu(false)
     const ref = useRef();
 
     useOnClickOutside(ref, () => setMobileMenu(false))
@@ -64,15 +65,15 @@ function Nav(){
                     }/>
                     <Hamburguer toggle={toggleMobileMenu} close={mobileMenu}/>
                 </span>
-                <div className={(mobileMenu ? " backdrop-filter backdrop-blur-md  mt-2" : " -translate-y-96 ") + "  flex transform justify-around items-center flex-col transition-all py-4 w-full z-10 rounded-xl text-dark bg-light bg-opacity-70 md:translate-y-0  md:flex-row md:w-full md:bg-transparent md:text-dark md:py-0 md:backdrop-blur-none"}>
+                <div className={(mobileMenu ? " backdrop-filter backdrop-blur-md mt-2" : " -translate-y-96 ") + " flex transform justify-around items-center flex-col transition-all py-4 w-full z-10 rounded-xl text-dark bg-light bg-opacity-70 md:translate-y-0  md:flex-row md:w-full md:bg-transparent md:text-dark md:py-0 md:backdrop-blur-none"}>
                     <Scrollable sectionId="Experience" element={
-                        <Link  name="Experience" link="/" action={toggleMobileMenu}/>
+                        <Link  name="Experience" link="/" action={closeMobileMenu}/>
                     }/>
                     <Scrollable  sectionId="Display" element={
-                        <Link name="My work" link="/" action={toggleMobileMenu}/>
+                        <Link name="My work" link="/" action={closeMobileMenu}/>
                     }/>
                     <Scrollable sectionId="Contact" element={
-                        <SecondaryButton name="Contact" action={toggleMobileMenu}/>
+                        <SecondaryButton name="Contact" action={closeMobileMenu}/>
                     }/>
                 </div>
             </div>
