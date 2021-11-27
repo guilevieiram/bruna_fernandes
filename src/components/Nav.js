@@ -61,7 +61,7 @@ function Nav(){
                 <span className="flex items-center justify-around w-full bg-light backdrop-blur-md backdrop-filter bg-opacity-70 md:bg-transparent md:backdrop-blur-none z-60">
                     <Scrollable sectionId="HomePage" element={
                         // <p className="my-4 ml-4 mr-12 text-xl text-dark font-display">B.F.</p>
-                        <img src={logo} alt="" className="my-1 ml-4 mr-12 h-10 cursor-pointer" />
+                        <img src={logo} alt="" className="my-1 ml-4 mr-12 h-10 cursor-pointer  select-none" />
                     }/>
                     <Hamburguer toggle={toggleMobileMenu} close={mobileMenu}/>
                 </span>

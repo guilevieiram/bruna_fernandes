@@ -12,7 +12,7 @@ const arrowImages = {
 
 const Arrow = (side, func) => {
     return (
-        <div className={` cursor-pointer absolute px-8 ${side}-0 transform transition-all hover:-translate-y-2`} onClick={func}>
+        <div className={` cursor-pointer absolute px-8 ${side}-0 transform transition-all hover:-translate-y-2 select-none`} onClick={func}>
             <img src={arrowImages[side]} className="h-14 shadow-xl" />
         </div>
     )
@@ -38,7 +38,7 @@ function CarrousselBalls ({numberBalls, selectedBall, changeImage}){
         for(let index = 0; index < numberBalls ; index ++){
             let color = index === selectedBall ? "light" : "gray-400"
             let func = index === selectedBall ? ()=>{} : () => {changeImage(index)}
-            balls = [...balls, ball(`w-3 h-3 cursor-pointer transition-all rounded-full bg-${color} transform hover:-translate-y-px`, func)]
+            balls = [...balls, ball(`w-3 h-3 cursor-pointer transition-all rounded-full bg-${color} transform hover:-translate-y-px select-none`, func)]
         }
         return balls
     }

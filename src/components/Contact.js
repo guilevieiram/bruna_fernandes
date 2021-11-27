@@ -42,7 +42,7 @@ function Contact () {
                 </div>
             </div>
             <div className="h-screen absolute shadow-inner hidden transform right-0 md:block">
-                <img src={background} alt=""  className="h-full w-full left-0 filter brightness-125  "/>
+                <img src={background} alt=""  className="h-full w-full left-0 filter brightness-125 select-none"/>
             </div>
         </div>
     )

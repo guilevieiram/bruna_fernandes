@@ -9,7 +9,7 @@ function Experience ({imagePosition, image, title, description, link, date}) {
 
     return (
         <div className={"flex justify-start items-center w-full my-20 px-4 " + (leftImage ? "" : "flex-row-reverse")}>
-            <img src={image} alt="" href={link} className={"cursor-pointer h-20  " + (leftImage ? "mr-4" : "ml-4")}/>
+            <img src={image} alt="" href={link} className={"cursor-pointer h-20  select-none " + (leftImage ? "mr-4" : "ml-4")}/>
             <div className={(leftImage ? "text-left" : "text-right")}>
                 <h1 href={link} className="text-lg font-semibold cursor-pointer transition-all hover:underline hover:text-primary">{title}</h1>
                 <p className="italic py-1">{date}</p>
