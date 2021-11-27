@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/bruna_fernandes/static/css/main.3bb4cabe.chunk.css",
-    "main.js": "/bruna_fernandes/static/js/main.e7b7ada9.chunk.js",
-    "main.js.map": "/bruna_fernandes/static/js/main.e7b7ada9.chunk.js.map",
+    "main.js": "/bruna_fernandes/static/js/main.c1d80c35.chunk.js",
+    "main.js.map": "/bruna_fernandes/static/js/main.c1d80c35.chunk.js.map",
     "runtime-main.js": "/bruna_fernandes/static/js/runtime-main.a1ad6201.js",
     "runtime-main.js.map": "/bruna_fernandes/static/js/runtime-main.a1ad6201.js.map",
-    "static/js/2.4b89a996.chunk.js": "/bruna_fernandes/static/js/2.4b89a996.chunk.js",
-    "static/js/2.4b89a996.chunk.js.map": "/bruna_fernandes/static/js/2.4b89a996.chunk.js.map",
+    "static/js/2.8a19782d.chunk.js": "/bruna_fernandes/static/js/2.8a19782d.chunk.js",
+    "static/js/2.8a19782d.chunk.js.map": "/bruna_fernandes/static/js/2.8a19782d.chunk.js.map",
     "index.html": "/bruna_fernandes/index.html",
     "static/css/main.3bb4cabe.chunk.css.map": "/bruna_fernandes/static/css/main.3bb4cabe.chunk.css.map",
-    "static/js/2.4b89a996.chunk.js.LICENSE.txt": "/bruna_fernandes/static/js/2.4b89a996.chunk.js.LICENSE.txt",
+    "static/js/2.8a19782d.chunk.js.LICENSE.txt": "/bruna_fernandes/static/js/2.8a19782d.chunk.js.LICENSE.txt",
     "static/media/arrow-l.52e94a24.svg": "/bruna_fernandes/static/media/arrow-l.52e94a24.svg",
     "static/media/arrow-message.fa10c95d.svg": "/bruna_fernandes/static/media/arrow-message.fa10c95d.svg",
     "static/media/arrow-r.b2315a20.svg": "/bruna_fernandes/static/media/arrow-r.b2315a20.svg",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.a1ad6201.js",
-    "static/js/2.4b89a996.chunk.js",
+    "static/js/2.8a19782d.chunk.js",
     "static/css/main.3bb4cabe.chunk.css",
-    "static/js/main.e7b7ada9.chunk.js"
+    "static/js/main.c1d80c35.chunk.js"
   ]
 }
